@@ -39,8 +39,8 @@ const sections = [
 
 const DiractoryMenu = () =>(
         <div className="directory-menu">
-        {sections.map(({title, imageUrl, id, size})=>(
-            <MenuItem key={id} title={title} imageUrl={imageUrl} size={size}/>
+        {sections.map(({ id, ...otherSectionpProps})=>(
+            <MenuItem key={id} {...otherSectionpProps}/>
         ))}
         </div> 
 )
